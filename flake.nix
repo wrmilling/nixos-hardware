@@ -12,6 +12,7 @@
       {
         acer-aspire-4810t = import ./acer/aspire/4810t;
         airis-n990 = import ./airis/n990;
+        aoostar-r1-n100 = import ./aoostar/r1/n100;
         apple-imac-14-2 = import ./apple/imac/14-2;
         apple-imac-18-2 = import ./apple/imac/18-2;
         apple-macbook-air-3 = import ./apple/macbook-air/3;
@@ -31,8 +32,11 @@
         asus-ally-rc71l = import ./asus/ally/rc71l;
         asus-fx504gd = import ./asus/fx504gd;
         asus-fx506hm = import ./asus/fx506hm;
+        asus-fa506ic = import ./asus/fa506ic;
         asus-fa507nv = import ./asus/fa507nv;
         asus-fa507rm = import ./asus/fa507rm;
+        asus-flow-gv302x-amdgpu = import ./asus/flow/gv302x/amdgpu;
+        asus-flow-gv302x-nvidia = import ./asus/flow/gv302x/nvidia;
         asus-pro-ws-x570-ace = import ./asus/pro-ws-x570-ace;
         asus-rog-strix-g513im = import ./asus/rog-strix/g513im;
         asus-rog-strix-g713ie = import ./asus/rog-strix/g713ie;
@@ -52,21 +56,28 @@
         beagleboard-pocketbeagle = import ./beagleboard/pocketbeagle;
         chuwi-minibook-x = import ./chuwi/minibook-x;
         deciso-dec = import ./deciso/dec;
-        dell-e7240 = import ./dell/e7240;
+        dell-e7240 =
+          deprecated "1326" "dell-e7240"
+            (import ./dell/e7240);
         dell-g3-3779 = import ./dell/g3/3779;
+        dell-g3-3579 = import ./dell/g3/3579;
         dell-inspiron-14-5420 = import ./dell/inspiron/14-5420;
         dell-inspiron-5509 = import ./dell/inspiron/5509;
         dell-inspiron-5515 = import ./dell/inspiron/5515;
         dell-inspiron-7405 = import ./dell/inspiron/7405;
         dell-inspiron-7460 = import ./dell/inspiron/7460;
+        dell-inspiron-7559 = import ./dell/inspiron/7559;
         dell-latitude-3340 = import ./dell/latitude/3340;
         dell-latitude-3480 = import ./dell/latitude/3480;
+        dell-latitude-5490 = import ./dell/latitude/5490;
         dell-latitude-5520 = import ./dell/latitude/5520;
         dell-latitude-7280 = import ./dell/latitude/7280;
         dell-latitude-7390 = import ./dell/latitude/7390;
+        dell-latitude-7420 = import ./dell/latitude/7420;
         dell-latitude-7430 = import ./dell/latitude/7430;
         dell-latitude-7490 = import ./dell/latitude/7490;
         dell-latitude-9430 = import ./dell/latitude/9430;
+        dell-latitude-e7240 = import ./dell/latitude/e7240;
         dell-optiplex-3050 = import ./dell/optiplex/3050;
         dell-poweredge-r7515 = import ./dell/poweredge/r7515;
         dell-precision-3541 = import ./dell/precision/3541;
@@ -92,6 +103,8 @@
         dell-xps-15-9510-nvidia = import ./dell/xps/15-9510/nvidia;
         dell-xps-15-9520 = import ./dell/xps/15-9520;
         dell-xps-15-9520-nvidia = import ./dell/xps/15-9520/nvidia;
+        dell-xps-15-9530 = import ./dell/xps/15-9530;
+        dell-xps-15-9530-nvidia = import ./dell/xps/15-9530/nvidia;
         dell-xps-15-9550 = import ./dell/xps/15-9550;
         dell-xps-15-9550-nvidia = import ./dell/xps/15-9550/nvidia;
         dell-xps-15-9560 = import ./dell/xps/15-9560;
@@ -114,10 +127,12 @@
         friendlyarm-nanopi-r5s = import ./friendlyarm/nanopi-r5s;
         focus-m2-gen1 = import ./focus/m2/gen1;
         gigabyte-b550 = import ./gigabyte/b550;
+        gigabyte-b650 = import ./gigabyte/b650;
         google-pixelbook = import ./google/pixelbook;
         gpd-micropc = import ./gpd/micropc;
         gpd-p2-max = import ./gpd/p2-max;
         gpd-pocket-3 = import ./gpd/pocket-3;
+        gpd-pocket-4 = import ./gpd/pocket-4;
         gpd-win-2 = import ./gpd/win-2;
         gpd-win-max-2-2023 = import ./gpd/win-max-2/2023;
         gpd-win-mini-2024 = import ./gpd/win-mini/2024;
@@ -126,14 +141,17 @@
         hp-elitebook-845g7 = import ./hp/elitebook/845/g7;
         hp-elitebook-845g8 = import ./hp/elitebook/845/g8;
         hp-elitebook-845g9 = import ./hp/elitebook/845/g9;
+        hp-probook-440G5 = import ./hp/probook/440G5;
         hp-laptop-14s-dq2024nf = import ./hp/laptop/14s-dq2024nf;
         huawei-machc-wa = import ./huawei/machc-wa;
         hp-notebook-14-df0023 = import ./hp/notebook/14-df0023;
         intel-nuc-8i7beh = import ./intel/nuc/8i7beh;
+        lenovo-ideacentre-k330 = import ./lenovo/ideacentre/k330;
         lenovo-ideapad-15alc6 = import ./lenovo/ideapad/15alc6;
         lenovo-ideapad-15arh05 = import ./lenovo/ideapad/15arh05;
         lenovo-ideapad-15ach6 = import ./lenovo/ideapad/15ach6;
         lenovo-ideapad-16ach6 = import ./lenovo/ideapad/16ach6;
+        lenovo-ideapad-16ahp9 = import ./lenovo/ideapad/16ahp9;
         lenovo-ideapad-z510 = import ./lenovo/ideapad/z510;
         lenovo-ideapad-slim-5 = import ./lenovo/ideapad/slim-5;
         lenovo-ideapad-s145-15api = import ./lenovo/ideapad/s145-15api;
@@ -149,12 +167,14 @@
         lenovo-legion-16arha7 = import ./lenovo/legion/16arha7;
         lenovo-legion-16ithg6 = import ./lenovo/legion/16ithg6;
         lenovo-legion-16irx8h = import ./lenovo/legion/16irx8h;
+        lenovo-legion-16irx9h = import ./lenovo/legion/16irx9h;
         lenovo-legion-t526amr5 = import ./lenovo/legion/t526amr5;
         lenovo-legion-y530-15ich = import ./lenovo/legion/15ich;
         lenovo-thinkpad = import ./lenovo/thinkpad;
         lenovo-thinkpad-a475 = import ./lenovo/thinkpad/a475;
         lenovo-thinkpad-e14-amd = import ./lenovo/thinkpad/e14/amd;
         lenovo-thinkpad-e14-intel = import ./lenovo/thinkpad/e14/intel;
+        lenovo-thinkpad-e15-intel = import ./lenovo/thinkpad/e15/intel;
         lenovo-thinkpad-e470 = import ./lenovo/thinkpad/e470;
         lenovo-thinkpad-e495 = import ./lenovo/thinkpad/e495;
         lenovo-thinkpad-l13 = import ./lenovo/thinkpad/l13;
@@ -169,7 +189,10 @@
         lenovo-thinkpad-p14s-amd-gen3 = import ./lenovo/thinkpad/p14s/amd/gen3;
         lenovo-thinkpad-p14s-amd-gen4 = import ./lenovo/thinkpad/p14s/amd/gen4;
         lenovo-thinkpad-p14s-intel-gen3 = import ./lenovo/thinkpad/p14s/intel/gen3;
+        lenovo-thinkpad-p14s-intel-gen5 = import ./lenovo/thinkpad/p14s/intel/gen5;
         lenovo-thinkpad-p16s-amd-gen1 = import ./lenovo/thinkpad/p16s/amd/gen1;
+        lenovo-thinkpad-p16s-amd-gen2 = import ./lenovo/thinkpad/p16s/amd/gen2;
+        lenovo-thinkpad-p43s = import ./lenovo/thinkpad/p43s;
         lenovo-thinkpad-p50 = import ./lenovo/thinkpad/p50;
         lenovo-thinkpad-p51 = import ./lenovo/thinkpad/p51;
         lenovo-thinkpad-p52 = import ./lenovo/thinkpad/p52;
@@ -196,6 +219,7 @@
         lenovo-thinkpad-t480 = import ./lenovo/thinkpad/t480;
         lenovo-thinkpad-t480s = import ./lenovo/thinkpad/t480s;
         lenovo-thinkpad-t490 = import ./lenovo/thinkpad/t490;
+        lenovo-thinkpad-t490s = import ./lenovo/thinkpad/t490s;
         lenovo-thinkpad-t495 = import ./lenovo/thinkpad/t495;
         lenovo-thinkpad-t520 = import ./lenovo/thinkpad/t520;
         lenovo-thinkpad-w520 = import ./lenovo/thinkpad/w520;
@@ -236,6 +260,8 @@
         lenovo-yoga-7-14ARH7 = import ./lenovo/yoga/7/14ARH7;
         lenovo-yoga-7-14ARH7-amdgpu = import ./lenovo/yoga/7/14ARH7/amdgpu;
         lenovo-yoga-7-14ARH7-nvidia = import ./lenovo/yoga/7/14ARH7/nvidia;
+        lenovo-yoga-7-14IAH7-integrated = import ./lenovo/yoga/7/14IAH7/integrated;
+        lenovo-yoga-7-14IAH7-hybrid = import ./lenovo/yoga/7/14IAH7/hybrid;
         lenovo-yoga-7-slim-gen8 = import ./lenovo/yoga/7/slim/gen8;
         letsnote-cf-lx4 = import ./panasonic/letsnote/cf-lx4;
         malibal-aon-s1-intel = import ./malibal/aon/s1;
@@ -259,7 +285,9 @@
         nxp-imx8qm-mek = import ./nxp/imx8qm-mek;
         hardkernel-odroid-hc4 = import ./hardkernel/odroid-hc4;
         hardkernel-odroid-h3 = import ./hardkernel/odroid-h3;
+        hardkernel-odroid-h4 = import ./hardkernel/odroid-h4;
         omen-14-fb0798ng = import ./omen/14-fb0798ng;
+        omen-15-ce002ns = import ./omen/15-ce002ns;
         omen-15-en0010ca = import ./omen/15-en0010ca;
         omen-16-n0005ne = import ./omen/16-n0005ne;
         omen-16-n0280nd = import ./omen/16-n0280nd;
@@ -279,8 +307,13 @@
         raspberry-pi-3 = import ./raspberry-pi/3;
         raspberry-pi-4 = import ./raspberry-pi/4;
         raspberry-pi-5 = import ./raspberry-pi/5;
+        rock-4c-plus = import ./radxa/rock-4c-plus;
+        rock-5b = import ./radxa/rock-5b;
+        rock-pi-4 = import ./radxa/rock-pi-4;
+        rock-pi-e = import ./radxa/rock-pi-e;
         kobol-helios4 = import ./kobol/helios4;
         samsung-np900x3c = import ./samsung/np900x3c;
+        slimbook-hero-rpl-rtx = import ./slimbook/hero/rpl-rtx;
         starfive-visionfive-v1 = import ./starfive/visionfive/v1;
         starfive-visionfive-2 = import ./starfive/visionfive/v2;
         starlabs-starlite-i5 = import ./starlabs/starlite/i5;
@@ -297,8 +330,10 @@
         tuxedo-aura-15-gen1 = import ./tuxedo/aura/15/gen1;
         tuxedo-infinitybook-v4 = import ./tuxedo/infinitybook/v4;
         tuxedo-infinitybook-pro14-gen7 = import ./tuxedo/infinitybook/pro14/gen7;
+        tuxedo-infinitybook-pro14-gen9-intel = import ./tuxedo/infinitybook/pro14/gen9-intel;
         tuxedo-pulse-14-gen3 = import ./tuxedo/pulse/14/gen3;
         tuxedo-pulse-15-gen2 = import ./tuxedo/pulse/15/gen2;
+        xiaomi-redmibook-16-pro-2024 = import ./xiaomi/redmibook/16-pro-2024;
 
         common-cpu-amd = import ./common/cpu/amd;
         common-cpu-amd-pstate = import ./common/cpu/amd/pstate.nix;
@@ -328,7 +363,7 @@
         common-pc = import ./common/pc;
         common-pc-hdd = import ./common/pc/hdd;
         common-pc-laptop = import ./common/pc/laptop;
-        common-pc-laptop-acpi_call = import ./common/pc/laptop/acpi_call.nix;
+        common-pc-laptop-acpi_call = throw "common-pc-laptop-acpi_call has been removed because it is obsolete: https://github.com/NixOS/nixos-hardware/issues/1114";
         common-pc-laptop-hdd = import ./common/pc/laptop/hdd;
         common-pc-laptop-ssd = import ./common/pc/ssd;
         common-pc-ssd = import ./common/pc/ssd;
